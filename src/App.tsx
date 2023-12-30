@@ -1,12 +1,22 @@
+import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import './App.css';
 import MainPage from './components/MainPage';
 
+import "@fontsource/varela-round";
+import './App.css';
+
 const theme = createTheme({
+  palette: {
+    background: {
+      default: '#FFF5ED'
+    }
+  },
   typography: {
     allVariants: {
-      textAlign: 'center'
+      textAlign: 'center',
+      fontFamily: 'Varela Round',
+      color: '#182757'
     }
   }
 });
@@ -14,6 +24,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <MainPage />
     </ThemeProvider>
   );

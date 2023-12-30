@@ -1,152 +1,36 @@
-import { Typography } from '@mui/material';
+import {useTheme} from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
-import exampleImage from '../assets/example-image.jpg';
-import Box from '@mui/system/Box';
+import Welcome from "./Welcome";
+import TreatmentTypesGrid from "./TreatmentTypes";
+import Divider from "./common/Divider";
+import ContactUs from "./ContactUs";
 
 function MainPage() {
-  return (
-    <Grid
-      container
-      direction={"column"}
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
-      <Grid
-        item
-        xs={12}
-        sx={{
-          width: "100%",
-          backgroundColor: "#AED6F1"
-        }}
-        pt={6}
-        pb={6}
-      >
-        <Typography variant="h2" fontWeight={600}>
-          הודיה פנסאפורקאר
-        </Typography>
-        <Typography variant="h5">
-          קלינאית תקשורת התפתחותית
-        </Typography>
-      </Grid>
+    const theme = useTheme();
 
-      <Grid
-        container
-        item
-        sx={{
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-        pt={6}
-        pb={6}
-      >
-        <Grid item xs={6}>
-          <img src={exampleImage} />
-        </Grid>
+    return (
         <Grid
-          item
-          xs={6}
-        >
-          <Typography variant="h4" fontWeight={600} sx={{ textDecoration: 'underline' }} mb={2}>
-            עליי
-          </Typography>
-          <Box
+            container
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
             sx={{
-              display: 'flex',
-              justifyContent: 'center'
+                width: "100%"
             }}
-          >
-            <Typography
-              variant='body1'
-              sx={{
-                maxWidth: 350
-              }}
-            >
-              קלינאית תקשורת לילדים, בעלת ניסיון בעבודה במכון להתפתחות הילד ובהנחיית קבוצות למיומנויות חברתיות. אני עוסקת בטיפול בילדים בגילאי הגן ועד לביה"ס היסודי בתחומי השפה, הדיבור והתקשורת.
-              הטיפול מבוסס על הגישה ההתפתחותית טבעית, המתאפיינת בלמידה חוויתית באמצעות משחק והנאה. לכל ילד נבנית תוכנית טיפולית המותאמת לצרכים ולתחומי העניין שלהם.
-              <br /><br />
-              :אני מאמין
-              <br />
-              יצירת קשר של אמון עם ילדכם ואיתכם ההורים הוא הבסיס לחולל שינוי, להתקדם ולהתמודד עם אתגרים. קשר זה הוא המפתח לשיתוף פעולה מיטבי של הילד, העלאת תחושת המסוגלות והנאה משותפת.
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Grid
-        container
-        item
-        sx={{
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-        pt={6}
-        pb={6}
-      >
-        <Grid
-          item
-          xs={6}
         >
-          <Typography variant="h4" fontWeight={600} sx={{ textDecoration: 'underline' }} mb={2}>
-            קבוצת מיומנויות חברתיות
-          </Typography>
-          <Typography variant="body1">
-            קבוצה זו מיועדת לילדים בגילאי הגן אשר זקוקים לתגבור
-          </Typography>
-          <Typography variant="body1">
-            .במגוון מיומנויות רגשיות וחברתיות
-          </Typography>
-          <Typography variant="body1">
-            זוהי מסגרת קבוצתית בהם הילדים, כקבוצה, מתנסים
-          </Typography>
-          <Typography variant="body1">
-            .במגוון של משימות חברתיות בצורה של משחק וכיף
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-        >
-          <Typography variant="h4" fontWeight={600} sx={{ textDecoration: 'underline' }} mb={2}>
-            טיפול פרטני
-          </Typography>
-          <Typography variant="body1">
-            טיפול לילדים בגיל גן עם קשיים בהבנת
-          </Typography>
-          <Typography variant="body1">
-            והבעת השפה- אוצר מילים דל, קשיי תחביר
-          </Typography>
-          <Typography variant="body1">
-            ודקדוק, קושי בארגון מסר מילולי, קשיי
-          </Typography>
-          <Typography variant="body1">
-            .שליפה, אוטיזם, אילמות סלקטיבית ועוד
-          </Typography>
-        </Grid>
-      </Grid>
+            <Welcome/>
 
-      <Grid
-        item
-        xs={12}
-        sx={{
-          width: "100%",
-          backgroundColor: "#AED6F1"
-        }}
-        pt={6}
-        pb={6}
-      >
-        <Typography variant="h4" fontWeight={600} sx={{ textDecoration: 'underline' }} mb={2}>
-          צור קשר
-        </Typography>
-        <Typography variant="body1">
-          מספר טלפון: 052-8814090
-          <br />
-          hodayaph@gmail.com :כתובת מייל
+            <Divider/>
 
-        </Typography>
-      </Grid>
-    </Grid>
-  );
+            <TreatmentTypesGrid/>
+
+            <Divider/>
+
+            <ContactUs />
+        </Grid>
+    );
 }
 
 export default MainPage;
