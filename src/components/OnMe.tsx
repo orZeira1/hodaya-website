@@ -41,6 +41,7 @@ function OnMe() {
                     ?מי אני
                 </Typography>
                 <Typography
+                    variant="body1"
                     pb={3}
                     pt={3}
                     width={300}
@@ -49,12 +50,14 @@ function OnMe() {
                     למיומנויות חברתיות
                 </Typography>
                 <Typography
+                    variant="body1"
                     pb={3}
                     width={300}
                 >
                     עוסקת בטיפול בילדים בגילאי הגן וביה"ס היסודי בתחומי השפה, הדיבור והתקשורת
                 </Typography>
                 <Typography
+                    variant="body1"
                     width={300}
                 >
                     הטיפול מבוסס על הגישה ההתפתחותית טבעית, המתאפיינת בלמידה חוויתית באמצעות משחק והנאה. לכל ילד נבנית

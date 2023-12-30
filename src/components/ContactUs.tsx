@@ -18,7 +18,7 @@ function ContactUs() {
             <Typography
                 variant="h4"
                 fontWeight={600}
-                mb={2}
+                pb={2}
                 sx={{
                     textDecoration: 'underline'
                 }}
@@ -28,9 +28,17 @@ function ContactUs() {
             <Typography
                 variant="body1"
             >
-                מספר טלפון: 052-8814090
-                <br/>
-                hodayaph.slp@gmail.com :כתובת מייל
+                052-8814090
+            </Typography>
+            <Typography
+                variant="body1"
+            >
+                hodayaph.slp@gmail.com
+            </Typography>
+            <Typography
+                variant="body1"
+            >
+                כיכר רבין, תל אביב
             </Typography>
         </Grid>
     );

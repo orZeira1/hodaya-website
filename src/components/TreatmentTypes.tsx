@@ -105,6 +105,7 @@ function TreatmentTypes() {
                         הדרכת הורים
                     </Typography>
                     <Typography
+                        variant="body1"
                         width={200}
                     >
                         ההורים הם סוכני השינוי המשמעותיים ביותר לקידום יכולותיו השפתיות של הילד.
@@ -128,6 +129,7 @@ function TreatmentTypes() {
                         טיפול קבוצתי
                     </Typography>
                     <Typography
+                        variant="body1"
                         width={200}
                     >
                         הטיפול הקבוצתי מתאים לילדים המתקשים להתמודד באופן יעיל במצבים חברתיים ומגלים קושי בהבנת
@@ -154,6 +156,7 @@ function TreatmentTypes() {
                         טיפול פרטני
                     </Typography>
                     <Typography
+                        variant="body1"
                         width={200}
                     >
                         תחומי הטיפול: אוצר מילים דל, קשיי תחביר ודקדוק, קושי בארגון מסר מילולי, קשיי שליפה, אוטיזם,
@@ -178,6 +181,7 @@ function TreatmentTypes() {
                         אבחון
                     </Typography>
                     <Typography
+                        variant="body1"
                         width={200}
                     >
                         מטרת האבחון היא להעריך באופן נרחב את יכולותיהם של הילדים ולראות האם יש תחומים בהם קיים קושי ביחס
