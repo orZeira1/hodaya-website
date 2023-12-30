@@ -6,6 +6,7 @@ import Welcome from "./Welcome";
 import TreatmentTypesGrid from "./TreatmentTypes";
 import Divider from "./common/Divider";
 import ContactUs from "./ContactUs";
+import OnMe from "./OnMe";
 
 function MainPage() {
     const theme = useTheme();
@@ -25,6 +26,10 @@ function MainPage() {
             <Divider/>
 
             <TreatmentTypesGrid/>
+
+            <Divider/>
+
+            <OnMe />
 
             <Divider/>
 

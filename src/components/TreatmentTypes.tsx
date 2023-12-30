@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import bunniesGroupImg from "../assets/bunnies-group.png";
+import jellyfishImg from "../assets/jellyfish.png";
 import kangarooImg from "../assets/kangaroo.png";
 import hedgehogImg from "../assets/hedgehog.png";
 import whaleImg from "../assets/whale.png";
@@ -51,10 +51,10 @@ function TreatmentTypes() {
                     xs={3}
                 >
                     <img
-                        src={bunniesGroupImg}
+                        src={jellyfishImg}
                         alt={"bunnies-group"}
-                        width={"120"}
-                        height={"120"}
+                        width={"100"}
+                        height={"100"}
                     />
                 </Grid>
                 <Grid
@@ -134,7 +134,7 @@ function TreatmentTypes() {
                         סיטואציות
                         חברתיות,
 
-                        למשל: קושי בפתרון בעיות, קושי בהבנת האחר וגילוי גמישות לצרכיו
+                        למשל: קושי בפתרון בעיות ובהבנת האחר
                     </Typography>
                 </Grid>
                 <Grid
