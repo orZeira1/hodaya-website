@@ -38,6 +38,9 @@ function TreatmentTypes() {
                 <Grid
                     item
                     xs={3}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    alignItems="center"
                 >
                     <img
                         src={kangarooImg}
@@ -45,60 +48,11 @@ function TreatmentTypes() {
                         width={"100"}
                         height={"100"}
                     />
-                </Grid>
-                <Grid
-                    item
-                    xs={3}
-                >
-                    <img
-                        src={jellyfishImg}
-                        alt={"bunnies-group"}
-                        width={"100"}
-                        height={"100"}
-                    />
-                </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"flex-end"}
-                    justifyContent={"center"}
-                >
-                    <img
-                        src={hedgehogImg}
-                        alt={"hedgehog"}
-                        width={"100"}
-                        height={"100"}
-                    />
-                </Grid>
-                <Grid
-                    item
-                    xs={3}
-                >
-                    <img
-                        src={whaleImg}
-                        alt={"whale"}
-                        width={"100"}
-                        height={"100"}
-                    />
-                </Grid>
-            </Grid>
-            <Grid
-                container
-                item
-                xs={12}
-            >
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    flexDirection={"column"}
-                    alignItems="center"
-                >
                     <Typography
                         variant={"h6"}
                         sx={{
                             fontWeight: "600",
+                            pt: 1,
                             pb: 1
                         }}
                     >
@@ -119,10 +73,17 @@ function TreatmentTypes() {
                     flexDirection={"column"}
                     alignItems="center"
                 >
+                    <img
+                        src={jellyfishImg}
+                        alt={"bunnies-group"}
+                        width={"100"}
+                        height={"100"}
+                    />
                     <Typography
                         variant={"h6"}
                         sx={{
                             fontWeight: "600",
+                            pt: 1,
                             pb: 1
                         }}
                     >
@@ -146,10 +107,17 @@ function TreatmentTypes() {
                     flexDirection={"column"}
                     alignItems="center"
                 >
+                    <img
+                        src={hedgehogImg}
+                        alt={"hedgehog"}
+                        width={"100"}
+                        height={"100"}
+                    />
                     <Typography
                         variant={"h6"}
                         sx={{
                             fontWeight: "600",
+                            pt: 1,
                             pb: 1
                         }}
                     >
@@ -171,10 +139,17 @@ function TreatmentTypes() {
                     flexDirection={"column"}
                     alignItems="center"
                 >
+                    <img
+                        src={whaleImg}
+                        alt={"whale"}
+                        width={"100"}
+                        height={"100"}
+                    />
                     <Typography
                         variant={"h6"}
                         sx={{
                             fontWeight: "600",
+                            pt: 1,
                             pb: 1
                         }}
                     >
