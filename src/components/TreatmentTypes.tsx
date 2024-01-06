@@ -1,3 +1,4 @@
+import {Box} from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -8,17 +9,8 @@ import whaleImg from "../assets/whale.png";
 
 function TreatmentTypes() {
     return (
-        <Grid
-            container
-            item
-            xs={12}
-            pt={6}
-            pb={6}
-        >
-            <Grid
-                item
-                xs={12}
-            >
+        <Box>
+            <Box>
                 <Typography
                     variant="h5"
                     fontWeight={600}
@@ -29,15 +21,17 @@ function TreatmentTypes() {
                 >
                     תחומי טיפול
                 </Typography>
-            </Grid>
+            </Box>
             <Grid
                 container
-                item
-                xs={12}
+                rowSpacing={3}
+                justifyContent={"center"}
             >
                 <Grid
                     item
-                    xs={3}
+                    xs={12}
+                    sm={6}
+                    md={3}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -68,7 +62,9 @@ function TreatmentTypes() {
                 </Grid>
                 <Grid
                     item
-                    xs={3}
+                    xs={12}
+                    sm={6}
+                    md={3}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -102,7 +98,9 @@ function TreatmentTypes() {
                 </Grid>
                 <Grid
                     item
-                    xs={3}
+                    xs={12}
+                    sm={6}
+                    md={3}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -134,7 +132,9 @@ function TreatmentTypes() {
                 </Grid>
                 <Grid
                     item
-                    xs={3}
+                    xs={12}
+                    sm={6}
+                    md={3}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -164,7 +164,7 @@ function TreatmentTypes() {
                     </Typography>
                 </Grid>
             </Grid>
-        </Grid>
+        </Box>
     );
 }
 
