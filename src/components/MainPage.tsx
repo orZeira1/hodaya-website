@@ -1,6 +1,4 @@
-import {useTheme} from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import Box from "@mui/material/Box";
 
 import Welcome from "./Welcome";
 import TreatmentTypesGrid from "./TreatmentTypes";
@@ -9,32 +7,19 @@ import ContactUs from "./ContactUs";
 import OnMe from "./OnMe";
 
 function MainPage() {
-    const theme = useTheme();
-
     return (
-        <Grid
-            container
-            direction={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            sx={{
-                width: "100%"
-            }}
+        <Box
+            display={"flex"}
+            flexDirection={"column"}
         >
             <Welcome/>
-
             <Divider/>
-
             <TreatmentTypesGrid/>
-
             <Divider/>
-
-            <OnMe />
-
+            <OnMe/>
             <Divider/>
-
-            <ContactUs />
-        </Grid>
+            <ContactUs/>
+        </Box>
     );
 }
 

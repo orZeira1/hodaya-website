@@ -1,18 +1,10 @@
-import {useTheme} from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
 
-import welcomeImg from "../assets/welcome.png";
-
 function ContactUs() {
-    const theme = useTheme();
-
     return (
-        <Grid
-            item
-            xs={12}
-            pt={6}
+        <Box
+            pt={2}
             pb={6}
         >
             <Typography
@@ -40,7 +32,7 @@ function ContactUs() {
             >
                 כיכר רבין, תל אביב
             </Typography>
-        </Grid>
+        </Box>
     );
 }
 

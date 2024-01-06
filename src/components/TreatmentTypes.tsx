@@ -1,4 +1,4 @@
-import {Box} from "@mui/material";
+import Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -9,7 +9,10 @@ import whaleImg from "../assets/whale.png";
 
 function TreatmentTypes() {
     return (
-        <Box>
+        <Box
+            pt={2}
+            pb={2}
+        >
             <Box>
                 <Typography
                     variant="h5"

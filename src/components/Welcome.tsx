@@ -1,6 +1,5 @@
 import {useTheme} from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
 
 import welcomeImg from "../assets/welcome.png";
@@ -9,28 +8,17 @@ function Welcome() {
     const theme = useTheme();
 
     return (
-        <Grid
-            item
-            xs={12}
-            pt={6}
-            pb={6}
+        <Box
+            pt={2}
+            pb={2}
         >
-            <img
-                src={welcomeImg}
-                alt={"weclome"}
-                width={"1300"}
-                height={"500"}
-                style={{
-                    opacity: 0.85
-                }}
-            />
-            <Paper
+            <Box
                 sx={{
-                    position: "absolute",
+                    position: {lg: "absolute"},
                     top: 120,
                     right: 150,
-                    p: 5,
-                    pb: 15,
+                    p: {lg: 5},
+                    pb: {xs: 2, lg: 10},
                     backgroundColor: theme.palette.background.default
                 }}
             >
@@ -55,8 +43,17 @@ function Welcome() {
                 <Typography variant="h4">
                     קלינאית תקשורת
                 </Typography>
-            </Paper>
-        </Grid>
+            </Box>
+            <Box
+                component={"img"}
+                src={welcomeImg}
+                alt={"welcome"}
+                sx={{
+                    width: {xs: "100%", lg: "90%"},
+                    height: {xs: 300, lg: 500}
+                }}
+            />
+        </Box>
     );
 }
 
