@@ -17,21 +17,6 @@ function OnMe() {
                 item
                 xs={12}
                 sm={6}
-            >
-                <Box
-                    component={"img"}
-                    src={hodayaPortraitImg}
-                    alt={"hodaya-portrait"}
-                    sx={{
-                        width: {xs: "100%", lg: "90%"},
-                        height: {xs: 400, md: 500}
-                    }}
-                />
-            </Grid>
-            <Grid
-                item
-                xs={12}
-                sm={6}
                 display={"flex"}
                 flexDirection={"column"}
                 alignItems={"center"}
@@ -47,7 +32,7 @@ function OnMe() {
                             textDecoration: "underline"
                         }}
                     >
-                        ?מי אני
+                        מי אני?
                     </Typography>
                     <Typography
                         variant="body1"
@@ -71,6 +56,21 @@ function OnMe() {
                         תוכנית טיפולית המותאמת לצרכים ולתחומי העניין שלו
                     </Typography>
                 </Box>
+            </Grid>
+            <Grid
+                item
+                xs={12}
+                sm={6}
+            >
+                <Box
+                    component={"img"}
+                    src={hodayaPortraitImg}
+                    alt={"hodaya-portrait"}
+                    sx={{
+                        width: {xs: "100%", lg: "90%"},
+                        height: {xs: 400, md: 500}
+                    }}
+                />
             </Grid>
         </Grid>
     );
