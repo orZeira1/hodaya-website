@@ -4,7 +4,7 @@ import WhatsAppIcon from '../../assets/whatsapp.svg';
 
 const WhatsAppButton = () => {
     const phoneNumber = '0528814090';
-    const message = 'Hello, I would like to chat with you!';
+    const message = 'שלום, אשמח להתייעץ בנוגע לטיפול';
     const encodedMessage = encodeURIComponent(message);
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
