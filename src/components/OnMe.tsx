@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 
 import hodayaPortraitImg from "../assets/hodayaPortrait.jpeg";
-import welcomeImg from "../assets/welcome.png";
 
 function OnMe() {
     return (

@@ -11,9 +11,6 @@ function MainPage() {
         <Box
             display={"flex"}
             flexDirection={"column"}
-            sx={{
-                direction: 'rtl'
-            }}
         >
             <Welcome/>
             <Divider/>
