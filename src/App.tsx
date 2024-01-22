@@ -1,6 +1,8 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 
+import './firebase';
+
 import MainPage from './components/MainPage';
 
 import "@fontsource/varela-round";

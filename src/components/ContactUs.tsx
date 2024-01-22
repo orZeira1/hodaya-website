@@ -1,15 +1,11 @@
 import {ChangeEvent, FormEvent, useState} from "react";
 import rtlPlugin from 'stylis-plugin-rtl';
 import {prefixer} from 'stylis';
-import {CacheProvider} from '@emotion/react';
 import createCache from '@emotion/cache';
 
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import Typography from '@mui/material/Typography';
-import {useTheme} from "@mui/material/styles";
 
 import FacebookButton from "./common/facebookButton";
 import InstagramButton from "./common/instagramButton";
@@ -27,8 +23,6 @@ const cacheRtl = createCache({
 });
 
 function ContactUs() {
-    const theme = useTheme();
-
     const [formData, setFormData] = useState<FormData>({
         name: '',
         phone: '',
