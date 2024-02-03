@@ -1,21 +1,22 @@
 import {ChangeEvent, FormEvent, useState} from "react";
 import rtlPlugin from 'stylis-plugin-rtl';
 import {prefixer} from 'stylis';
+
 import createCache from '@emotion/cache';
+import {CacheProvider} from "@emotion/react";
 
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 import Typography from '@mui/material/Typography';
+import {useTheme} from "@mui/material/styles";
 
 import FacebookButton from "./common/facebookButton";
 import InstagramButton from "./common/instagramButton";
 import WhatsappButton from "./common/whatsappButton";
-
-type FormData = {
-    name: string;
-    phone: string;
-    message: string;
-};
+import {leaveMessage} from "../services/ContactUs";
+import {LeaveMessageForm} from "../types/LeaveMessageForm";
 
 const cacheRtl = createCache({
     key: 'muirtl',
@@ -23,7 +24,9 @@ const cacheRtl = createCache({
 });
 
 function ContactUs() {
-    const [formData, setFormData] = useState<FormData>({
+    const theme = useTheme();
+
+    const [formData, setFormData] = useState<LeaveMessageForm>({
         name: '',
         phone: '',
         message: ''
@@ -38,8 +41,10 @@ function ContactUs() {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData); // For demonstration
+
+        leaveMessage(formData)
+            .catch(err => {
+            });
     };
 
     return (
@@ -54,7 +59,7 @@ function ContactUs() {
                 <Grid
                     item
                     xs={12}
-                    sm={6}
+                    sm={4}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -120,7 +125,7 @@ function ContactUs() {
                 <Grid
                     item
                     xs={12}
-                    sm={6}
+                    sm={4}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems="center"
@@ -158,7 +163,7 @@ function ContactUs() {
                         13:00 - 09:00
                     </Typography>
                 </Grid>
-                {/*<Grid
+                <Grid
                     item
                     xs={12}
                     sm={4}
@@ -173,7 +178,7 @@ function ContactUs() {
                             textDecoration: 'underline'
                         }}
                     >
-                        השאר הודעה
+                        השאירו הודעה
                     </Typography>
                     <CacheProvider value={cacheRtl}>
                         <Box maxWidth={300}>
@@ -186,7 +191,7 @@ function ContactUs() {
                                     margin="normal"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    style={{ marginTop: 0, marginBottom: 0 }}
+                                    style={{marginTop: 0, marginBottom: 0}}
                                 />
                                 <TextField
                                     label="טלפון"
@@ -196,7 +201,7 @@ function ContactUs() {
                                     margin="normal"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    style={{ marginTop: 0, marginBottom: 0 }}
+                                    style={{marginTop: 0, marginBottom: 0}}
                                 />
                                 <TextField
                                     label="הודעה"
@@ -207,7 +212,7 @@ function ContactUs() {
                                     multiline
                                     value={formData.message}
                                     onChange={handleChange}
-                                    style={{ marginTop: 0, marginBottom: 0 }}
+                                    style={{marginTop: 0, marginBottom: 0}}
                                 />
                                 <Button
                                     type="submit"
@@ -224,7 +229,7 @@ function ContactUs() {
                             </form>
                         </Box>
                     </CacheProvider>
-                </Grid>*/}
+                </Grid>
             </Grid>
         </Box>
     );
