@@ -25,13 +25,10 @@ function OnMe() {
                     width={300}
                 >
                     <Typography
-                        variant="h5"
+                        variant="h4"
                         fontWeight={600}
-                        sx={{
-                            textDecoration: "underline"
-                        }}
                     >
-                        מי אני?
+                        קצת עליי
                     </Typography>
                     <Typography
                         variant="body1"
@@ -66,8 +63,8 @@ function OnMe() {
                     src={hodayaPortraitImg}
                     alt={"hodaya-portrait"}
                     sx={{
-                        width: {xs: "100%", lg: "90%"},
-                        height: {xs: 400, md: 500}
+                        width: {xs: "100%", lg: "80%"},
+                        height: {xs: 300, md: 500}
                     }}
                 />
             </Grid>

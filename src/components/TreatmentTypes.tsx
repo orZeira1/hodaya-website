@@ -15,10 +15,9 @@ function TreatmentTypes() {
         >
             <Box>
                 <Typography
-                    variant="h5"
+                    variant="h4"
                     fontWeight={600}
                     sx={{
-                        textDecoration: "underline",
                         pb: 4
                     }}
                 >
