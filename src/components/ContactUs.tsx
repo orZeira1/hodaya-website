@@ -17,6 +17,7 @@ import InstagramButton from "./common/instagramButton";
 import WhatsappButton from "./common/whatsappButton";
 import {leaveMessage} from "../services/ContactUs";
 import {LeaveMessageForm} from "../types/LeaveMessageForm";
+import {Alert} from "@mui/material";
 
 const cacheRtl = createCache({
     key: 'muirtl',
@@ -25,6 +26,8 @@ const cacheRtl = createCache({
 
 function ContactUs() {
     const theme = useTheme();
+    const [leaveMessageSuccessAlert, setLeaveMessageSuccessAlert] = useState(false);
+    const [leaveMessageErrorAlert, setLeaveMessageErrorAlert] = useState(false);
 
     const [formData, setFormData] = useState<LeaveMessageForm>({
         name: '',
@@ -43,7 +46,13 @@ function ContactUs() {
         e.preventDefault();
 
         leaveMessage(formData)
+            .then(() => {
+                setLeaveMessageSuccessAlert(true);
+                setLeaveMessageErrorAlert(false);
+            })
             .catch(err => {
+                setLeaveMessageSuccessAlert(false);
+                setLeaveMessageErrorAlert(true);
             });
     };
 
@@ -228,6 +237,18 @@ function ContactUs() {
                                 </Button>
                             </form>
                         </Box>
+                        {
+                            leaveMessageSuccessAlert &&
+                            <Alert severity="success">
+                                תודה, אחזור אליכם בהקדם
+                            </Alert>
+                        }
+                        {
+                            leaveMessageErrorAlert &&
+                            <Alert severity="error">
+                                שגיאה, אנא פנו אליי בwhatsapp
+                            </Alert>
+                        }
                     </CacheProvider>
                 </Grid>
             </Grid>
