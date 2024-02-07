@@ -87,12 +87,16 @@ function ContactUs() {
                     <Typography
                         variant="body1"
                     >
-                        052-8814090
+                        <a href="tel:+972528814090">
+                            052-8814090
+                        </a>
                     </Typography>
                     <Typography
                         variant="body1"
                     >
-                        hodayaph.slp@gmail.com
+                        <a href="mailto:hodayaph.slp@gmail.com">
+                            hodayaph.slp@gmail.com
+                        </a>
                     </Typography>
                     <Typography
                         variant="body1"

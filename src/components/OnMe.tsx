@@ -64,7 +64,7 @@ function OnMe() {
                     alt={"hodaya-portrait"}
                     sx={{
                         width: {xs: "100%", lg: "80%"},
-                        height: {xs: 300, md: 500}
+                        height: {xs: 350, md: 500}
                     }}
                 />
             </Grid>
