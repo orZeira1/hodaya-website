@@ -2,8 +2,6 @@ import Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 
-import hodayaPortraitImg from "../assets/hodayaPortrait.jpeg";
-
 function OnMe() {
     return (
         <Grid
@@ -60,7 +58,7 @@ function OnMe() {
             >
                 <Box
                     component={"img"}
-                    src={hodayaPortraitImg}
+                    src={"/slp/hodayaPortrait.jpeg"}
                     alt={"hodaya-portrait"}
                     sx={{
                         width: {xs: "100%", lg: "80%"},

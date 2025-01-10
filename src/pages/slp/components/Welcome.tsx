@@ -2,8 +2,6 @@ import {useTheme} from '@mui/material/styles';
 import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
 
-import welcomeImg from "../assets/welcome.png";
-
 function Welcome() {
     const theme = useTheme();
 
@@ -36,7 +34,7 @@ function Welcome() {
             </Box>
             <Box
                 component={"img"}
-                src={welcomeImg}
+                src={"/slp/welcome.png"}
                 alt={"welcome"}
                 sx={{
                     width: {xs: "100%", lg: "90%"},

@@ -2,11 +2,6 @@ import Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import jellyfishImg from "../assets/jellyfish.png";
-import kangarooImg from "../assets/kangaroo.png";
-import hedgehogImg from "../assets/hedgehog.png";
-import whaleImg from "../assets/whale.png";
-
 function TreatmentTypes() {
     return (
         <Box
@@ -39,7 +34,7 @@ function TreatmentTypes() {
                     alignItems="center"
                 >
                     <img
-                        src={whaleImg}
+                        src={"/slp/whale.png"}
                         alt={"whale"}
                         width={"100"}
                         height={"100"}
@@ -73,7 +68,7 @@ function TreatmentTypes() {
                     alignItems="center"
                 >
                     <img
-                        src={hedgehogImg}
+                        src={"/slp/hedgehog.png"}
                         alt={"hedgehog"}
                         width={"100"}
                         height={"100"}
@@ -107,7 +102,7 @@ function TreatmentTypes() {
                     alignItems="center"
                 >
                     <img
-                        src={jellyfishImg}
+                        src={"/slp/jellyfish.png"}
                         alt={"bunnies-group"}
                         width={"100"}
                         height={"100"}
@@ -140,7 +135,7 @@ function TreatmentTypes() {
                     alignItems="center"
                 >
                     <img
-                        src={kangarooImg}
+                        src={"/slp/kangaroo.png"}
                         alt={"kangaroo"}
                         width={"100"}
                         height={"100"}
