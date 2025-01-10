@@ -2,8 +2,11 @@ import Box from "@mui/material/Box";
 
 import InstagramIcon from '../../assets/instagram.svg';
 
-const InstagramButton = () => {
-    const username = 'hodayaph_slp';
+interface InstagramButtonProps {
+    username: string;
+}
+
+const InstagramButton = ({ username }: InstagramButtonProps) => {
     const instagramProfileUrl = `https://www.instagram.com/${username}/`;
 
     return (

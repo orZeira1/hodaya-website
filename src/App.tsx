@@ -1,35 +1,19 @@
-import CssBaseline from "@mui/material/CssBaseline";
-import {ThemeProvider, createTheme} from '@mui/material/styles';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import './firebase';
+import Slp from './pages/slp/Slp';
+import DizengoffMommies from "./pages/dizzengoff_mommies/DizengoffMommies";
 
-import MainPage from './components/MainPage';
-
-import "@fontsource/varela-round";
 import './App.css';
-
-const theme = createTheme({
-    direction: 'rtl',
-    palette: {
-        background: {
-            default: '#FFF5ED'
-        }
-    },
-    typography: {
-        allVariants: {
-            textAlign: 'center',
-            fontFamily: 'Varela Round',
-            color: '#182757'
-        }
-    }
-});
+import './firebase';
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            <MainPage/>
-        </ThemeProvider>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Slp/>}/>
+                <Route path="/dizengoff_mommies" element={<DizengoffMommies/>}/>
+            </Routes>
+        </Router>
     );
 }
 
