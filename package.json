@@ -7,8 +7,8 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/varela-round": "^5.0.8",
     "@mui/material": "^5.14.10",
-    "axios": "^1.6.7",
-    "firebase": "^10.7.1",
+    "axios": "^1.7.9",
+    "firebase": "^10.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.1.1",
@@ -51,7 +51,7 @@
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "@types/stylis": "^4.2.5",
-    "firebase-tools": "^13.0.2",
+    "firebase-tools": "^13.29.1",
     "typescript": "^4.9.5"
   }
 }
