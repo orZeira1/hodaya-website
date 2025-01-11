@@ -1,30 +1,29 @@
 import Box from "@mui/material/Box";
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 import Typography from '@mui/material/Typography';
 import {Link} from "@mui/material";
+import LinkIcon from '@mui/icons-material/Link';
 
 import {Event} from "../types/Event";
-
+import {useTheme} from "@mui/material/styles";
 
 const events: Event[] = [
     {
-        img: "/dizengoff_mommies/emuna_dagan.png",
-        title: "\"בוחרים נכון\"",
-        subtitle: "איך נבנה סביבת אכילה מיטבית עבור הילד שלך",
+        img: "/dizengoff_mommies/lecturers/emuna_dagan.png",
+        title: "\"בוחרים נכון\" - איך נבנה סביבת אכילה מיטבית עבור הילד שלך",
         lecturer: "אמונה דגן",
         details: "מרכז מעיין | 24.1.25",
         link: "https://pay.grow.link/dd2f0c99ddabccd1699ac9a4968450b3-MTYxMzA3NA"
     },
     {
-        img: "/dizengoff_mommies/tal_ben_david.png",
-        title: "\"כשלב פוגש לב\"",
-        subtitle: "יסודות יצירת הקשר עם תינוקך",
+        img: "/dizengoff_mommies/lecturers/tal_ben_david.jpeg",
+        title: "\"כשלב פוגש לב\" - יסודות יצירת הקשר עם תינוקך",
         lecturer: "טל בן דוד סלע",
         details: "\"השמורה\" | 28.1.25",
         link: "https://pay.grow.link/5e32dadbe1634336242422861e2d7ded-MTQ3NjgwNg"
     },
     {
-        img: "/dizengoff_mommies/meital_manshari.png",
+        img: "/dizengoff_mommies/lecturers/meital_manshari.png",
         title: "ספרים ושירי אצבעות",
         lecturer: "מיטל מנשרי נפתלי",
         details: "\"השמורה\" | 17.2.25"
@@ -32,6 +31,8 @@ const events: Event[] = [
 ];
 
 function UpcomingEvents() {
+    const theme = useTheme();
+
     return (
         <Box
             pt={2}
@@ -50,7 +51,7 @@ function UpcomingEvents() {
             </Box>
             <Grid
                 container
-                rowSpacing={3}
+                rowSpacing={1}
                 justifyContent={"center"}
             >
                 {events.map((event, index) => (
@@ -60,19 +61,27 @@ function UpcomingEvents() {
                         xs={12}
                         sm={6}
                         md={4}
-                        display={"flex"}
-                        flexDirection={"column"}
-                        alignItems="center"
+                        sx={{
+                            display: "flex", // Flexbox layout
+                            flexDirection: "column", // Column direction for child elements
+                            alignItems: "center", // Center alignment for content
+                            border: "1px solid white", // Border around the grid item
+                            padding: 1, // Add padding inside the grid
+                            margin: 2, // Outer margin
+                        }}
                     >
-                        <img
+                        <Box
+                            component="img"
                             src={event.img}
-                            alt={`${index}`}
-                            width={"200"}
-                            height={"200"}
+                            alt={`lecturer ${index}`}
+                            sx={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "contain"
+                            }}
                         />
                         <Typography
                             variant={"h5"}
-                            width={200}
                             sx={{
                                 fontWeight: "600",
                                 pt: 1,
@@ -82,19 +91,7 @@ function UpcomingEvents() {
                             {event.title}
                         </Typography>
                         <Typography
-                            variant={"h6"}
-                            width={200}
-                            sx={{
-                                fontWeight: "600",
-                                pt: 1,
-                                pb: 1
-                            }}
-                        >
-                            {event.subtitle}
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            width={200}
+                            variant="h6"
                             sx={{
                                 fontWeight: "600"
                             }}
@@ -102,28 +99,48 @@ function UpcomingEvents() {
                             {event.lecturer}
                         </Typography>
                         <Typography
-                            variant="body1"
-                            width={200}
+                            variant="h6"
                         >
                             {event.details}
                         </Typography>
-                        <Typography
-                            variant="body1"
-                            width={200}
+                        <Box
+                            sx={{
+                                mt: 3,
+                                mb: 2,
+                            }}
                         >
                             {
                                 event.link ?
-                                    <Link
-                                        href={event.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <Box
+                                        sx={{
+                                            display: "flex", // Use flexbox for alignment
+                                            alignItems: "center", // Align items vertically
+                                            backgroundColor: "white",
+                                            color: theme.palette.background.default,
+                                            borderRadius: 2,
+                                            p: 1,
+                                            gap: 1, // Space between the text and the icon
+                                        }}
                                     >
-                                        להרשמה
-                                    </Link>
+                                        <Link
+                                            href={event.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            underline={"none"}
+                                            sx={{
+                                                color: theme.palette.background.default,
+                                            }}
+                                        >
+                                            להרשמה
+                                        </Link>
+                                        <LinkIcon/>
+                                    </Box>
                                     :
-                                    "בקרוב"
+                                    <Typography>
+                                        בקרוב
+                                    </Typography>
                             }
-                        </Typography>
+                        </Box>
                     </Grid>
                 ))}
             </Grid>

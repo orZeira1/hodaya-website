@@ -11,7 +11,7 @@ import TreatmentTypesGrid from "./components/TreatmentTypes";
 import Divider from "../../components/common/Divider";
 import ContactUs from "./components/ContactUs";
 import OnMe from "./components/OnMe";
-import {theme} from "../../theme/theme";
+import {slpTheme} from "../../theme/theme";
 
 function Slp() {
     useEffect(() => {
@@ -19,7 +19,7 @@ function Slp() {
     }, []);
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={slpTheme}>
             <CssBaseline/>
             <Box
                 display={"flex"}

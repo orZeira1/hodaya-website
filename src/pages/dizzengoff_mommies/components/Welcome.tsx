@@ -10,47 +10,6 @@ function Welcome() {
             }}
         >
             <Box
-                sx={{
-                    position: "absolute",
-                    top: { xs: 10, lg: 50 }, // Adjusted for better responsiveness
-                    right: { xs: 300, lg: 1100 }, // Constrained to avoid going off-screen
-                    pt: { xs: 5, lg: 10 },
-                    pb: { xs: 5, lg: 10 },
-                    pr: { lg: 5 },
-                    pl: { lg: 5 },
-                    maxWidth: "100%", // Ensure the content does not exceed the container width
-                }}
-            >
-                <Typography
-                    fontWeight={600}
-                    sx={{
-                        typography: {
-                            xs: "h6", // For extra-small screens
-                            sm: "h5", // For small screens
-                            md: "h4", // For medium screens
-                            lg: "h3", // For large screens
-                            xl: "h2", // For extra-large screens
-                        },
-                    }}
-                >
-                    DIZENGOFF
-                </Typography>
-                <Typography
-                    fontWeight={600}
-                    sx={{
-                        typography: {
-                            xs: "h6", // For extra-small screens
-                            sm: "h5", // For small screens
-                            md: "h4", // For medium screens
-                            lg: "h3", // For large screens
-                            xl: "h2", // For extra-large screens
-                        },
-                    }}
-                >
-                    MOMMIES
-                </Typography>
-            </Box>
-            <Box
                 component={"img"}
                 src={"/dizengoff_mommies/welcome.jpg"}
                 alt={"welcome"}
@@ -60,6 +19,21 @@ function Welcome() {
                     objectFit: "cover", // Ensure the image scales nicely
                 }}
             />
+            <Typography
+                variant={"h6"}
+                sx={{
+                    position: "absolute", // Position relative to the parent container
+                    top: "10%", // Center vertically
+                    left: "3%", // Adjust horizontal position
+                    // transform: "translateY(-50%)", // Center alignment
+                    color: "white", // Text color
+                    fontWeight: 600,
+                }}
+            >
+                DIZENGOFF
+                <br/>
+                MOMMIES
+            </Typography>
         </Box>
     );
 }

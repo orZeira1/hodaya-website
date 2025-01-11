@@ -2,7 +2,7 @@ import {createTheme} from '@mui/material/styles';
 
 import "@fontsource/varela-round";
 
-export const theme = createTheme({
+export const slpTheme = createTheme({
     direction: 'rtl',
     palette: {
         background: {
@@ -19,7 +19,6 @@ export const theme = createTheme({
 });
 
 export const dizengoffMommiesTheme = createTheme({
-    // direction: 'rtl',
     palette: {
         background: {
             default: '#2C1301'
@@ -30,6 +29,9 @@ export const dizengoffMommiesTheme = createTheme({
             textAlign: 'center',
             fontFamily: 'Varela Round',
             color: 'white'
+        },
+        h6: {
+            color: '#DDB78E'
         }
     }
 });

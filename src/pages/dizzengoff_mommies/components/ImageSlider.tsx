@@ -6,8 +6,8 @@ const images = [
     "/dizengoff_mommies/sliding_images/IMG_1048.jpg",
     "/dizengoff_mommies/sliding_images/IMG_1213.jpg",
     "/dizengoff_mommies/sliding_images/img-1.jpg",
-    "/dizengoff_mommies/sliding_images/img-2.jpg",
     "/dizengoff_mommies/sliding_images/img-3.jpg",
+    "/dizengoff_mommies/sliding_images/img-2.jpg",
 ];
 const interval = 3000;
 
