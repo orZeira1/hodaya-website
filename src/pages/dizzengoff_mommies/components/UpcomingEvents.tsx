@@ -24,7 +24,7 @@ const events: Event[] = [
     },
     {
         img: "/dizengoff_mommies/lecturers/meital_manshari.png",
-        title: "ספרים ושירי אצבעות",
+        title: "\"מתחברים דרך המילים\" - ספרים ודקלומים לתינוקות",
         lecturer: "מיטל מנשרי נפתלי",
         details: "\"השמורה\" | 17.2.25"
     }
